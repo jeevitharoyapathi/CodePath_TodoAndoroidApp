@@ -97,7 +97,7 @@ public class ToDoItemsDbHelper extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put("title", item.getTitle());
         contentValues.put("notes", item.getNotes());
-        contentValues.put("priority", item.getPriority());
+        contentValues.put("priority", item.getPriorityAsInterger());
         contentValues.put("status", item.getStatus());
         contentValues.put("duedate", item.getDueDate());
         db.update("toDoList", contentValues, ToDoList._ID + " = ? ", new String[]{Integer.toString(item.getID())});

@@ -70,7 +70,7 @@ public class ToDoList_Fragment extends Fragment {
         mFloatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                android.app.DialogFragment AddDialogFragment = com.jeevitharoyapathi.mytodolist.fragments.AddDialogFragment.newInstance(null,false);
+                android.app.DialogFragment AddDialogFragment = com.jeevitharoyapathi.mytodolist.fragments.AddDialogFragment.newInstance(new ToDoItem(),false);
                 AddDialogFragment.show(getActivity().getFragmentManager().beginTransaction(), "Add Item");
             }
         });

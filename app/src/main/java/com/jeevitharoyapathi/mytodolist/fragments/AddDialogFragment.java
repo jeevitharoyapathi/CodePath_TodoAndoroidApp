@@ -67,13 +67,8 @@ public class AddDialogFragment extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         Bundle args = getArguments();
-        if (args.getBoolean(IS_EDIT)) {
-            mToDoItem = (ToDoItem
-                    ) args.getSerializable(TODO_ITEM);
-            isEdit = true;
-        } else {
-            mToDoItem = new ToDoItem();
-        }
+        isEdit=args.getBoolean(IS_EDIT);
+        mToDoItem=(ToDoItem)args.getSerializable(TODO_ITEM);
         LayoutInflater inflater = getActivity().getLayoutInflater();
        final View container = inflater.inflate(R.layout.edit_item, null);
         View view = inflater.inflate(R.layout.dialog_custom_title, null);
@@ -142,6 +137,10 @@ public class AddDialogFragment extends DialogFragment {
             public void onShow(DialogInterface dialog) {
 
                 final Button positiveButton = ((AlertDialog) dialog).getButton(DialogInterface.BUTTON_POSITIVE);
+                if (etTitle.length() == 0) {
+                    positiveButton.setEnabled(false);
+                    txtInputLayout.setError("Enter Task Name");
+                }
                 etTitle.addTextChangedListener(new TextWatcher() {
                     @Override
                     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -151,8 +150,11 @@ public class AddDialogFragment extends DialogFragment {
                     public void onTextChanged(CharSequence s, int start, int before, int count) {
                         if (s.length() == 0) {
                             positiveButton.setEnabled(false);
+                            txtInputLayout.setError("Enter Task Name");
                         } else {
                            positiveButton.setEnabled(true);
+                            txtInputLayout.setError("");
+                            txtInputLayout.setErrorEnabled(false);
                         }
                     }
 
