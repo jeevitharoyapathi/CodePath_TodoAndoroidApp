@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edit_item_Container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_light_background">
+
+
+    <TextView
+        android:id="@+id/etTitle"
+        style="@style/listItemStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="@dimen/text_title"
+        android:textStyle="bold"
+        android:text="Task Name"/>
+
+    <TextView
+        android:id="@+id/lblDescription"
+        style="@style/listItemStyle"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etTitle"
+        android:text="@string/description" />
+
+    <TextView
+        android:id="@+id/txtNotes"
+        style="@style/listItemStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etTitle"
+        android:layout_toRightOf="@id/lblDescription"
+        android:maxLines="3"
+        android:text="Notes" />
+
+    <TextView
+        android:id="@+id/lblDueDate"
+        style="@style/listItemStyle"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblDescription"
+        android:text="@string/dueDate" />
+
+    <TextView
+        android:id="@+id/txtdueDate"
+        style="@style/listItemStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/lblDueDate"
+        android:layout_below="@+id/txtNotes"
+        android:text="12/12/21" />
+
+    <TextView
+        android:id="@+id/lblPriority"
+        style="@style/listItemStyle"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblDueDate"
+        android:text="@string/Priority" />
+
+    <TextView
+        android:id="@+id/spPriority"
+        style="@style/listItemStyle"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/lblPriority"
+        android:layout_below="@+id/txtdueDate"
+        android:text="@string/Priority" />
+
+
+</RelativeLayout>

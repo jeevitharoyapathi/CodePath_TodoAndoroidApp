@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#00ADED</color>
+    <color name="color_primarydark">#06709e</color>
+    <color name="color_accent">#00ADED</color>
+    <color name="colorprimarydark_transp">#330097A7</color>
+    <color name="colorprimary_transp">#1100BCD4</color>
+    <color name="coloraccent_transp">#3384FFFF</color>
+    <color name="grey">#909090</color>
+
+    <color name="color_control_normal">#84a1bb</color>
+    <color name="bg_activity_default">@android:color/white</color>
+
+    <!-- Text colors -->
+    <color name="text_primary">#54799B</color>
+    <color name="text_subtitle">#84a1bb</color>
+    <color name="text_dark">#1F3D59</color>
+
+    <!-- Lists -->
+    <color name="list_divider">#E1EAF2</color>
+    <color name="home_card_inner_divider">#D5DDE3</color>
+    <color name="list_header_background">#f6f9fb</color>
+    <color name="list_header_text">#5B7E9F</color>
+
+    <!-- FAB -->
+    <color name="fab_default_normal">#06709e</color>
+    <color name="fab_default_selected">#00ADED</color>
+</resources>
